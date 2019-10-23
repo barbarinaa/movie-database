@@ -1,0 +1,32 @@
+{
+  "name": "google-maps-project",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/barbarinaa/google-maps-project.git",
+  "author": "Barbara Skender",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.12",
+    "jest": "^24.9.0",
+    "node-sass": "^4.12.0",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  },
+  "scripts": {
+    "test": "jest",
+    "watch-js": "yarn run build-js --watch",
+    "build-js": "webpack",
+    "watch-sass": "yarn run build-sass --watch",
+    "build-sass": "node-sass src/scss/main.scss -o dist",
+    "build": "yarn run build-js && yarn run build-sass"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "preset": "ts-jest"
+  }
+}
