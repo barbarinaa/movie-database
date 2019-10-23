@@ -37,9 +37,11 @@ const buildMovieList = (listOfMovies) => {
 
 const myFavourites = (movie) => {
   console.log(movie);
+  const li = document.createElement("ul")
   let newList = document.getElementById("favouriteList");
-  newList.innerHTML += movie.Title
-  newList.innerHTML += movie.Year
+  li.innerHTML += `Title: "${movie.Title}", released: ${movie.Year}`;
+  newList.append(li);
+  // newList.innerHTML += movie.Year
 }
 
 // let itemsArray = []
