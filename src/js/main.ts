@@ -36,15 +36,33 @@ const buildMovieList = (listOfMovies) => {
 }
 
 const myFavourites = (movie) => {
-  console.log(movie);
+  console.log( typeof movie);
   const li = document.createElement("ul")
   let newList = document.getElementById("favouriteList");
   li.innerHTML += `Title: "${movie.Title}", released: ${movie.Year}`;
-  newList.append(li);
-  // newList.innerHTML += movie.Year
+  // newList.append(li);
+  var testObject = { 'one': `Title: "${movie.Title}", released: ${movie.Year}`};
+  localStorage.setItem('testObject', JSON.stringify(testObject));
+  var retrievedObject = localStorage.getItem('testObject');
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
 }
+
+// var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+
+// Put the object into storage
+// localStorage.setItem('testObject', JSON.stringify(testObject));
+
+// Retrieve the object from storage
+// var retrievedObject = localStorage.getItem('testObject');
+
+// console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 // let itemsArray = []
 
 // localStorage.setItem('items', JSON.stringify(itemsArray))
 // const data = JSON.parse(localStorage.getItem('items'))
+
+// data.forEach(item => {
+//   myFavourites(item)
+// })
