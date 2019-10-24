@@ -5,13 +5,15 @@
   font-family: 'Staatliches', cursive; }
 
 body {
-  background-color: #936E2D; }
+  background-image: url("../../assets/images/yellow.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 #movieList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #936E2D; }
+  background-color: #FFE362; }
   #movieList .card {
     margin: 10px;
     padding: 5px; }
