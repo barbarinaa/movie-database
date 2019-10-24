@@ -36,7 +36,6 @@ const buildMovieList = (listOfMovies) => {
 }
 
 const myFavourites = (movie) => {
-  console.log( typeof movie);
   const li = document.createElement("ul")
   let newList = document.getElementById("favouriteList");
   li.innerHTML += `Title: "${movie.Title}", released: ${movie.Year}`;
