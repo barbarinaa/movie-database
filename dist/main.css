@@ -2,11 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rock Salt', cursive; }
+  font-family: 'Staatliches', cursive; }
 
 body {
-  background-image: url("../../assets/images/yellow.jpg");
-  background-size: cover; }
+  background-color: #936E2D; }
+
+#movieList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #936E2D; }
+  #movieList .card {
+    margin: 10px;
+    padding: 5px; }
+    #movieList .card .card-text {
+      height: auto;
+      text-align: center; }
+    #movieList .card .card-img-top {
+      height: 350px;
+      margin: 3px; }
+    #movieList .card .btn-primary {
+      height: 8%; }
 
 .fav {
   border: 2px solid black; }

@@ -15,9 +15,9 @@ document.getElementById("submit").addEventListener("click", mySearch);
 
 const createListItem = (title: string, year: string, movie: any) => {
   if (movie == "N/A") {
-    return `<li>The title is ${title} and the year is ${year}<br><img src=${`https://www.maxim.com/.image/t_share/MTM1MTQyODM4NzIzMDgwMTYy/placeholder-title.jpg`}></li>`;
+    return `<div class="card" style="width: 18rem;"><p class="card-text">${title}</p><p class="card-text">${year}</p><img class="card-img-top" src=${`https://www.maxim.com/.image/t_share/MTM1MTQyODM4NzIzMDgwMTYy/placeholder-title.jpg`}><a href="#" class="btn btn-primary">Add to my List</a></div>`;
   } else {
-    return  `<li class="favourite">The title is ${title} and the year is ${year}<br><img src=${movie}></li>`;
+    return  `<div class="card" style="width: 18rem;"><p class="card-text">${title}</p><p class="card-text">${year}</p><img class="card-img-top" src=${movie}><a href="#" class="btn btn-primary">Add to my List</a></div>`;
   }
 }
 
@@ -25,7 +25,7 @@ const buildMovieList = (listOfMovies) => {
   let ul = document.getElementById("movieList");
   ul.innerHTML = "";
   listOfMovies.Search.forEach((movie) => {
-    const wrapper = document.createElement('ul');
+    const wrapper = document.createElement('div');
     wrapper.addEventListener('click', () => myFavourites(movie));
     wrapper.innerHTML += createListItem(movie.Title, movie.Year, movie.Poster);
     ul.append(wrapper);
@@ -36,11 +36,11 @@ const buildMovieList = (listOfMovies) => {
 }
 
 const myFavourites = (movie) => {
-  const li = document.createElement("ul")
+  const li = document.createElement("div")
   let newList = document.getElementById("favouriteList");
-  li.innerHTML += `Title: "${movie.Title}", released: ${movie.Year}`;
+  li.innerHTML += `${movie.Title}, ${movie.Year}`;
   // newList.append(li);
-  var testObject = { 'one': `Title: "${movie.Title}", released: ${movie.Year}`};
+  var testObject = { 'one': `"${movie.Title}, ${movie.Year}"`};
   localStorage.setItem('testObject', JSON.stringify(testObject));
   var retrievedObject = localStorage.getItem('testObject');
   console.log('retrievedObject: ', JSON.parse(retrievedObject));
