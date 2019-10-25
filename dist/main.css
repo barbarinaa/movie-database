@@ -2,29 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Staatliches', cursive; }
+  font-family: 'Staatliches', cursive;
+  color: #ff793f; }
 
 body {
-  background-image: url("../../assets/images/yellow.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-color: #2c2c54; }
 
 #movieList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #FFE362; }
+  background-color: #2c2c54; }
   #movieList .card {
+    height: 450px;
     margin: 10px;
-    padding: 5px; }
+    padding: 5px;
+    border: 3px solid #ff793f;
+    text-align: center;
+    background-color: #f1f2f6; }
     #movieList .card .card-text {
-      height: auto;
-      text-align: center; }
+      text-align: center;
+      font-size: 18px;
+      color: #2c2c54; }
     #movieList .card .card-img-top {
-      height: 350px;
-      margin: 3px; }
+      height: 270px;
+      width: 250px;
+      margin: 3px;
+      border: 2px solid #706fd3; }
     #movieList .card .btn-primary {
-      height: 8%; }
+      margin-top: 3px; }
 
 .fav {
   border: 2px solid black; }

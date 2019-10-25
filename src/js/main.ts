@@ -15,9 +15,31 @@ document.getElementById("submit").addEventListener("click", mySearch);
 
 const createListItem = (title: string, year: string, movie: any) => {
   if (movie == "N/A") {
-    return `<div class="card" style="width: 18rem;"><p class="card-text">${title}</p><p class="card-text">${year}</p><img class="card-img-top" src=${`https://www.maxim.com/.image/t_share/MTM1MTQyODM4NzIzMDgwMTYy/placeholder-title.jpg`}><a href="#" class="btn btn-primary">Add to my List</a></div>`;
+    return `
+    <div class="card" style="width: 18rem;">
+      <div>
+        <div class="card-body">
+          <p class="card-text">${title}, ${year}</p>
+        </div>
+        <img class="card-img-top" src=${`https://www.maxim.com/.image/t_share/MTM1MTQyODM4NzIzMDgwMTYy/placeholder-title.jpg`}>
+      </div>
+      <div>
+        <a href="#" class="btn btn-primary" id="btn">Add to my List</a>
+      </div>
+    </div>`;
   } else {
-    return  `<div class="card" style="width: 18rem;"><p class="card-text">${title}</p><p class="card-text">${year}</p><img class="card-img-top" src=${movie}><a href="#" class="btn btn-primary">Add to my List</a></div>`;
+    return  `
+    <div class="card" style="width: 18rem;">
+      <div>
+        <div class="card-body">
+          <p class="card-text">${title}, ${year}</p>
+        </div>
+        <img class="card-img-top" src=${movie}>
+      </div>
+      <div>
+        <a href="#" class="btn btn-primary" id="btn">Add to my List</a>
+      </div>
+    </div>`;
   }
 }
 
@@ -26,6 +48,7 @@ const buildMovieList = (listOfMovies) => {
   ul.innerHTML = "";
   listOfMovies.Search.forEach((movie) => {
     const wrapper = document.createElement('div');
+    wrapper.setAttribute("id", "btn");
     wrapper.addEventListener('click', () => myFavourites(movie));
     wrapper.innerHTML += createListItem(movie.Title, movie.Year, movie.Poster);
     ul.append(wrapper);
