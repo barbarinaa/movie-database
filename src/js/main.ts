@@ -62,29 +62,64 @@ const myFavourites = (movie) => {
   const li = document.createElement("div")
   let newList = document.getElementById("favouriteList");
   li.innerHTML += `${movie.Title}, ${movie.Year}`;
-  // newList.append(li);
-  var testObject = { 'one': `"${movie.Title}, ${movie.Year}"`};
+  newList.append(li);
+
+  const showList = document.getElementById("show")
+
+showList.addEventListener('click', function (event) {
+  var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
   localStorage.setItem('testObject', JSON.stringify(testObject));
-  var retrievedObject = localStorage.getItem('testObject');
-  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+}, false);
+
+// Check for saved wishlist items
+var saved = localStorage.getItem('testObject');
+
+// If there are any saved items, update our list
+if (saved) {
+	showList.innerHTML = saved;
+}
+
+  // var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
+  // localStorage.setItem('testObject', JSON.stringify(testObject));
+  // var retrievedObject = localStorage.getItem('testObject');
+  // console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
 }
 
-// var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+// const showList = document.getElementById("show")
 
-// Put the object into storage
-// localStorage.setItem('testObject', JSON.stringify(testObject));
+// showList.addEventListener('click', function (event) {
+//   var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
+//   localStorage.setItem('testObject', JSON.stringify(testObject));
 
-// Retrieve the object from storage
-// var retrievedObject = localStorage.getItem('testObject');
+// }, false);
 
-// console.log('retrievedObject: ', JSON.parse(retrievedObject));
+// // Check for saved wishlist items
+// var saved = localStorage.getItem('testObject');
 
-// let itemsArray = []
+// // If there are any saved items, update our list
+// if (saved) {
+// 	showList.innerHTML = saved;
+// }
 
-// localStorage.setItem('items', JSON.stringify(itemsArray))
-// const data = JSON.parse(localStorage.getItem('items'))
 
-// data.forEach(item => {
-//   myFavourites(item)
-// })
+
+
+
+
+
+
+// const storeMovies = (movie) => {
+//   let moviesArray = []
+//   var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
+//   moviesArray.push(testObject)
+//   localStorage.setItem('testObject', JSON.stringify(moviesArray));
+// }
+
+// const display = (one) => {
+//   let favList = document.getElementById('favouriteList');
+//   let retrievedObject = localStorage.getItem('testObject');
+//   favList.innerHTML = retrievedObject;
+//   return one;
+// }
