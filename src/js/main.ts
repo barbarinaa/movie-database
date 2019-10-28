@@ -63,21 +63,6 @@ const myFavourites = (movie) => {
   let newList = document.getElementById("favouriteList");
   li.innerHTML += `${movie.Title}, ${movie.Year}`;
   newList.append(li);
-
-  const showList = document.getElementById("show")
-
-showList.addEventListener('click', function (event) {
-  var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
-  localStorage.setItem('testObject', JSON.stringify(testObject));
-
-}, false);
-
-// Check for saved wishlist items
-var saved = localStorage.getItem('testObject');
-
-// If there are any saved items, update our list
-if (saved) {
-	showList.innerHTML = saved;
 }
 
   // var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
@@ -85,7 +70,7 @@ if (saved) {
   // var retrievedObject = localStorage.getItem('testObject');
   // console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
-}
+// }
 
 // const showList = document.getElementById("show")
 

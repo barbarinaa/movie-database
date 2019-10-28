@@ -11,6 +11,48 @@ body {
     background-color: #2c2c54;
 }
 
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ff793f;
+    font-size: 36px;
+    height: 80px;
+
+
+    h1 {
+        color: #2c2c54;
+        margin-right: 15px;
+        font-size: 55px;
+    }
+
+    input {
+        margin: 20px;
+        text-align: center;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        color: transparent;
+      }
+      input:focus:-moz-placeholder {
+        color: transparent;
+      }
+      
+      textarea:focus:-moz-placeholder {
+        color: #2c2c54;
+      }
+      textarea:focus::-webkit-input-placeholder {
+        color: #2c2c54;
+      }
+
+      #submit {
+        background-color: #2c2c54;
+        color: #ff793f;
+        width: 200px;
+    }
+}
+
 #movieList {
     display: flex;
     flex-direction: row;
@@ -41,7 +83,23 @@ body {
 
         .btn-primary {
             margin-top: 3px;
+            cursor: pointer;
         }
+    }
+}
+
+#favouriteList {
+    background-color: #ff793f;
+    font-size: 36px;
+    height: 80px;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #ff793f;
+
+    h1 {
+        color: #2c2c54;
+        font-size: 55px;
     }
 }
 

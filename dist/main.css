@@ -8,6 +8,34 @@
 body {
   background-color: #2c2c54; }
 
+#navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ff793f;
+  font-size: 36px;
+  height: 80px; }
+  #navbar h1 {
+    color: #2c2c54;
+    margin-right: 15px;
+    font-size: 55px; }
+  #navbar input {
+    margin: 20px;
+    text-align: center; }
+  #navbar input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  #navbar input:focus:-moz-placeholder {
+    color: transparent; }
+  #navbar textarea:focus:-moz-placeholder {
+    color: #2c2c54; }
+  #navbar textarea:focus::-webkit-input-placeholder {
+    color: #2c2c54; }
+  #navbar #submit {
+    background-color: #2c2c54;
+    color: #ff793f;
+    width: 200px; }
+
 #movieList {
   display: flex;
   flex-direction: row;
@@ -30,4 +58,17 @@ body {
       margin: 3px;
       border: 2px solid #706fd3; }
     #movieList .card .btn-primary {
-      margin-top: 3px; }
+      margin-top: 3px;
+      cursor: pointer; }
+
+#favouriteList {
+  background-color: #ff793f;
+  font-size: 36px;
+  height: 80px;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #ff793f; }
+  #favouriteList h1 {
+    color: #2c2c54;
+    font-size: 55px; }
