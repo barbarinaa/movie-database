@@ -28,7 +28,7 @@ const createListItem = (title: string, year: string, movie: any) => {
       </div>
     </div>`;
   } else {
-    return  `
+    return `
     <div class="card" style="width: 18rem;">
       <div>
         <div class="card-body">
@@ -52,9 +52,6 @@ const buildMovieList = (listOfMovies) => {
     wrapper.addEventListener('click', () => myFavourites(movie));
     wrapper.innerHTML += createListItem(movie.Title, movie.Year, movie.Poster);
     ul.append(wrapper);
-    // ul.innerHTML += createPosterItem(movie)
-    // ul.innerHTML += createFavouriteButton()
-    // ul.append(createPosterItem(movie)); --> if setting attribute outside of the string
   });
 }
 
@@ -64,6 +61,9 @@ const myFavourites = (movie) => {
   li.innerHTML += `${movie.Title}, ${movie.Year}`;
   newList.append(li);
 }
+
+
+///to create local storage and store/retrieve data from there
 
   // var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
   // localStorage.setItem('testObject', JSON.stringify(testObject));
@@ -75,15 +75,15 @@ const myFavourites = (movie) => {
 // const showList = document.getElementById("show")
 
 // showList.addEventListener('click', function (event) {
-//   var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
-//   localStorage.setItem('testObject', JSON.stringify(testObject));
+//   var movieObject = { 'one': `${movie.Title}, ${movie.Year}`};
+//   localStorage.setItem('movieObject', JSON.stringify(testObject));
 
 // }, false);
 
-// // Check for saved wishlist items
-// var saved = localStorage.getItem('testObject');
+// // Check for saved movies
+// var saved = localStorage.getItem('movieObject');
 
-// // If there are any saved items, update our list
+// // If there are any saved items, update list
 // if (saved) {
 // 	showList.innerHTML = saved;
 // }

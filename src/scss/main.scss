@@ -1,17 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Staatliches', cursive;
-    color: #ff793f;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Staatliches", cursive;
+  color: #ff793f;
 }
-
 
 body {
-    background-color: #2c2c54;
-}
+  background-color: #2c2c54;
 
-#navbar {
+  #navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,75 +18,73 @@ body {
     font-size: 36px;
     height: 80px;
 
-
     h1 {
-        color: #2c2c54;
-        margin-right: 15px;
-        font-size: 55px;
+      color: #2c2c54;
+      margin-right: 15px;
+      font-size: 55px;
     }
 
     input {
-        margin: 20px;
-        text-align: center;
+      margin: 20px;
+      text-align: center;
     }
 
     input:focus::-webkit-input-placeholder {
-        color: transparent;
-      }
-      input:focus:-moz-placeholder {
-        color: transparent;
-      }
-      
-      textarea:focus:-moz-placeholder {
-        color: #2c2c54;
-      }
-      textarea:focus::-webkit-input-placeholder {
-        color: #2c2c54;
-      }
-
-      #submit {
-        background-color: #2c2c54;
-        color: #ff793f;
-        width: 200px;
+      color: transparent;
     }
-}
+    input:focus:-moz-placeholder {
+      color: transparent;
+    }
 
-#movieList {
+    textarea:focus:-moz-placeholder {
+      color: #2c2c54;
+    }
+    textarea:focus::-webkit-input-placeholder {
+      color: #2c2c54;
+    }
+
+    #submit {
+      background-color: #2c2c54;
+      color: #ff793f;
+      width: 200px;
+    }
+  }
+
+  #movieList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color:#2c2c54;
+    background-color: #2c2c54;
 
     .card {
-        height: 450px;
-        margin: 10px;
-        padding: 5px;
-        border: 3px solid #ff793f;
+      height: 450px;
+      margin: 10px;
+      padding: 5px;
+      border: 3px solid #ff793f;
+      text-align: center;
+      background-color: #f1f2f6;
+
+      .card-text {
         text-align: center;
-        background-color: #f1f2f6;
+        font-size: 18px;
+        color: #2c2c54;
+      }
 
-        .card-text {
-            // height: auto;
-            text-align: center;
-            font-size: 18px;
-            color: #2c2c54;
-        }
+      .card-img-top {
+        height: 270px;
+        width: 250px;
+        margin: 3px;
+        border: 2px solid #706fd3;
+      }
 
-        .card-img-top {
-            height: 270px;
-            width: 250px;
-            margin: 3px;
-            border: 2px solid #706fd3;
-        }
-
-        .btn-primary {
-            margin-top: 3px;
-            cursor: pointer;
-        }
+      .btn-primary {
+        margin-top: 3px;
+        cursor: pointer;
+      }
     }
-}
+  }
 
-#favouriteList {
+  #favouriteList {
     background-color: #ff793f;
     font-size: 36px;
     height: 80px;
@@ -98,8 +94,8 @@ body {
     border: 2px solid #ff793f;
 
     h1 {
-        color: #2c2c54;
-        font-size: 55px;
+      color: #2c2c54;
+      font-size: 55px;
     }
+  }
 }
-
