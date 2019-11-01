@@ -2,7 +2,7 @@ const mySearch = (event) => {
   event.preventDefault();
   const movieSearch = document.getElementById("search") as HTMLInputElement;
   const yearSearch = document.getElementById("year") as HTMLInputElement;
-  const url = `http://www.omdbapi.com/?apikey=2af14bab&s=${movieSearch.value}&y=${yearSearch.value}`;
+  const url = `https://www.omdbapi.com/?apikey=2af14bab&s=${movieSearch.value}&y=${yearSearch.value}`;
   fetch(url)
     .then((response) => response.json())
     .then((listOfMovies) => buildMovieList(listOfMovies))
