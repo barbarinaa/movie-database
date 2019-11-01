@@ -92,9 +92,6 @@ const myFavourites = (movie) => {
 
 
 
-
-
-
 // const storeMovies = (movie) => {
 //   let moviesArray = []
 //   var testObject = { 'one': `${movie.Title}, ${movie.Year}`};
